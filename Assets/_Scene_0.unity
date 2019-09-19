@@ -294,7 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numClouds: 40
-  cloudPrefab: {fileID: 0}
+  cloudPrefab: {fileID: 1642087982015080, guid: 0719eb94fbc8d064da664cc2b249d7cf,
+    type: 3}
   cloudPosMin: {x: -50, y: -5, z: 10}
   cloudPosMax: {x: 150, y: 100, z: 10}
   cloudScaleMin: 1
@@ -312,13 +313,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b317f20814ccb9649ba3594c6d1c7998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uitLevel: {fileID: 0}
-  uitShots: {fileID: 0}
+  uitLevel: {fileID: 1437753101}
+  uitShots: {fileID: 895757027}
   uitButton: {fileID: 0}
-  castlePos: {x: 0, y: 0, z: 0}
-  castles: []
+  castlePos: {x: 50, y: -9.5, z: 0}
+  castles:
+  - {fileID: 1491326858099524, guid: dfe674b10c951e2448e37431c0fb78f5, type: 3}
+  - {fileID: 1491326858099524, guid: dcc145d89b2c1354e968821b352f1356, type: 3}
+  - {fileID: 1491326858099524, guid: 345b1805aa47ca8429d977304dc6c43f, type: 3}
+  - {fileID: 1491326858099524, guid: cd23b2e546e2c8640932b9e54925e3bc, type: 3}
   level: 0
-  levelMax: 0
+  levelMax: 4
   shotsTaken: 0
   castle: {fileID: 0}
   mode: 0
@@ -448,13 +453,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851201950}
-  m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
+  m_LocalRotation: {x: 0, y: 0.13052642, z: -0, w: -0.9914448}
   m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1988393163}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 345, z: 0}
 --- !u!122 &851201952
 Halo:
   m_ObjectHideFlags: 0
@@ -462,11 +467,11 @@ Halo:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851201950}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Color:
     serializedVersion: 2
     rgba: 4290756543
-  m_Size: 3
+  m_Size: 1
 --- !u!1 &878157301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,5 +1492,5 @@ MonoBehaviour:
   velocityMult: 8
   launchPoint: {fileID: 0}
   launchPos: {x: 0, y: 0, z: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 1719994583987584, guid: 2a333ea087665aa45a207cf79860b396, type: 3}
   aimingMode: 0
