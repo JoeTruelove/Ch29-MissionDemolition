@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Slingshot : MonoBehaviour {
 
 
@@ -20,19 +21,21 @@ public class Slingshot : MonoBehaviour {
     public bool aimingMode;
     private Rigidbody projectileRigidbody;
 
-    static public Vector3 Launch_POS()
+    static public Vector3 LAUNCH_POS
     {
-        get {
+        get
+        {
             if (S == null) return Vector3.zero;
             return S.launchPos;
         }
+        
     }
     private void Awake()
     {
         S = this;
         Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
-        launchPoint.setActive(false);
+        launchPoint.SetActive(false);
         launchPos = launchPointTrans.position;
     }
 
@@ -55,20 +58,20 @@ public class Slingshot : MonoBehaviour {
         //Instantiate a Projectile
         projectile = Instantiate(prefabProjectile) as GameObject;
         //Start it at the launchPoint
-        projectile.tranform.position = launchPos;
+        projectile.transform.position = launchPos;
         //Set it to isKinematic for now
-        projectile.getComponent<Rigidbody>().isKinematic = true;
+        projectile.GetComponent<Rigidbody>().isKinematic = true;
 
-        projectileRigidbody = projectile.getComponent<Rigidbody>();
+        projectileRigidbody = projectile.GetComponent<Rigidbody>();
         projectileRigidbody.isKinematic = true;
     }
 
     private void Update()
     {
 
-        if (!aimingMode) return true;
+        if (!aimingMode) return;
 
-        Vector3 mousePos2D = Input.mousePos3D - launchPos;
+        Vector3 mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
         Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
 
@@ -90,6 +93,8 @@ public class Slingshot : MonoBehaviour {
                 projectileRigidbody.velocity = -mouseDelta * velocityMult;
                 FollowCam.POI = projectile;
                 projectile = null;
+                MissionDemolition.ShotFired();
+                ProjectileLine.S.poi = projectile;
             }
         }
 
