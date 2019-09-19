@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uitLevel: {fileID: 1437753101}
   uitShots: {fileID: 895757027}
-  uitButton: {fileID: 0}
+  uitButton: {fileID: 962132492}
   castlePos: {x: 50, y: -9.5, z: 0}
   castles:
   - {fileID: 1491326858099524, guid: dfe674b10c951e2448e37431c0fb78f5, type: 3}
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabProjectile: {fileID: 1719994583987584, guid: 2a333ea087665aa45a207cf79860b396,
     type: 3}
-  velocityMult: 8
+  velocityMult: 10
   launchPoint: {fileID: 0}
   launchPos: {x: 0, y: 0, z: 0}
   projectile: {fileID: 1719994583987584, guid: 2a333ea087665aa45a207cf79860b396, type: 3}
